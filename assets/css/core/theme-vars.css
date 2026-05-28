@@ -33,10 +33,10 @@
 .dark {
     --theme: rgb(0, 0, 0);
     --entry: rgb(0, 0, 0);
-    --primary: rgb(218, 218, 219);
+    --primary: rgb(255, 255, 255);
     --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
+    --tertiary: rgb(0, 0, 0);
+    --content: rgb(255, 255, 255);
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
@@ -61,4 +61,44 @@
 .button:hover {
     border-color: var(--darkcolor);
     color: var(--darkcolor) !important;
+}
+
+.profile img {
+    border-radius: 12px !important;
+}
+
+.header,
+header,
+#header,
+nav {
+    background: #000000 !important;
+    background-color: #000000 !important;
+}
+
+/* more breathing room around the whole profile */
+.profile {
+    padding: 20px 0;
+}
+
+/* more space between image and text */
+.profile > div {
+    gap: 48px;
+}
+
+/* more space between name, bio, icons, and buttons */
+.profile h1 {
+    margin-bottom: 8px;
+}
+
+.profile span {
+    line-height: 1.2;
+}
+
+.social-icons {
+    margin: 8px 0;
+}
+
+.buttons {
+    margin-top: 8px;
+    gap: 8px;
 }
