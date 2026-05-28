@@ -45,10 +45,11 @@ params:
   UseHugoToc: true
   comments: false
   math: true
+  hideAuthor: true
   profileMode:
     enabled: true
-    title: Zayd Mahmud
-    subtitle: "I am a senior at Plano West Senior High School. I'm academically interested in philosophy and electrical engineering. I compete in Lincoln-Douglas debate at the national level, coach debate privately, and used to work as a freelance 3D generalist for over half a decade."
+    title: Hey! I'm Zayd Mahmud.
+    subtitle: "I'm a senior at Plano West Senior High School. I'm academically interested in philosophy, economics, and information technology. I compete in and coach debate at the national level, speak and organize various events in my community, and used to work as a freelance 3D generalist for over half a decade."
     imageUrl: "icon.jpeg"
     imageWidth: 160
     imageHeight: 160
@@ -91,3 +92,7 @@ markup:
     endLevel: 2
     ordered: false
     startLevel: 2
+
+module:
+  imports:
+    - path: github.com/rootwork/hugo-module-gallery-grid

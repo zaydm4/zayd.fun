@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "43ed4e44f4f5f974",
+    "type": "split",
+    "children": [
+      {
+        "id": "34f4f8369609241b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0bfdceacd2b8422",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "portfolio/environmental-renders.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "environmental-renders"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bf4261294caed5e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "888c3f0615b06c61",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fa60005c3ca5492",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "ced4c988f8a871cb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1ec03cb27c06fd24",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "405af998e3ef88bd",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f4106aa860ec6f0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a976ed9b0e9860e9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "portfolio/environmental-renders.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for environmental-renders"
+            }
+          },
+          {
+            "id": "e55dd02d39e434d2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "portfolio/environmental-renders.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from environmental-renders"
+            }
+          },
+          {
+            "id": "d0742d9dbbcd81a8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4b3e54eeb05d043f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "9b6d3946bfddef66",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "portfolio/environmental-renders.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of environmental-renders"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "d0bfdceacd2b8422",
+  "lastOpenFiles": [
+    "portfolio/npr.md",
+    "portfolio/favorites.md",
+    "portfolio/test/testing.md",
+    "portfolio/test/test.md",
+    "portfolio/test",
+    "portfolio/digital-portraiture.md",
+    "portfolio/imgs",
+    "portfolio/environmental-renders.md",
+    "portfolio/test.md",
+    "portfolio/env.md",
+    "portfolio/portfolio.md",
+    "portfolio",
+    "contact.md"
+  ]
+}
