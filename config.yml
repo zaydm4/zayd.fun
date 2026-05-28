@@ -1,5 +1,5 @@
-baseURL: "https://pascalmichaillat.org/hugo-website/" 
-title: Moritz-Maria von Igelfeld
+baseURL: "https://zayd.fun" 
+title: "zayd's corner"
 theme: PaperMod
 
 enableInlineShortcodes: true
@@ -76,28 +76,16 @@ params:
               url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
 
     socialIcons:
-        - name: CV
-          url: cv.pdf
+        - name: Resume
+          url: Resume.pdf
         - name: Email
           url: mailto:user@gmail.com
-        - name: Zoom
-          url: https://www.zoom.us/my/user
-        - name: Location
-          url: location/
-        - name: Office Hours
-          url: officehours/
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=user
         - name: GitHub
           url: https://github.com/user
-        - name: YouTube
-          url: https://www.youtube.com/@user
         - name: Substack
           url: https://user.substack.com
         - name: Twitter
           url: https://x.com/user
-        - name: Bluesky
-          url: https://bsky.app/profile/user.bsky.social
 
     assets:
         disableScrollBarStyle: true
