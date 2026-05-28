@@ -53,13 +53,12 @@
 }
 
 .button {
-    background: transparent;
+    background: transparent !important;
     border: 1px solid var(--primary);
-    color: var(--primary);
+    color: var(--primary) !important;
 }
 
 .button:hover {
-    background: transparent;
     border-color: var(--darkcolor);
-    color: var(--darkcolor);
+    color: var(--darkcolor) !important;
 }
