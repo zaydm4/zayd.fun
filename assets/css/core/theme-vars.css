@@ -71,8 +71,8 @@
 header,
 #header,
 nav {
-    background: #000000 !important;
-    background-color: #000000 !important;
+    background: rgba(0, 0, 0, 0) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 /* more breathing room around the whole profile */
