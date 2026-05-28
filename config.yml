@@ -12,14 +12,14 @@ taxonomies:
 
 menu:
   main:
-    - name: Blog
-      url: https://rectitudes.substack.com
-      weight: 1
     - name: Portfolio
       url: portfolio/
-      weight: 2
+      weight: 1
     - name: Contact
       url: contact/
+      weight: 2
+    - name: Blog
+      url: https://rectitudes.substack.com
       weight: 3
 
 params:
@@ -55,10 +55,10 @@ params:
     buttons:
       - name: Portfolio
         url: portfolio/
-      - name: Blog
-        url: https://rectitudes.substack.com
       - name: Contact
         url: contact/
+      - name: Blog
+        url: https://rectitudes.substack.com
   socialIcons:
     - name: CV
       url: cv.pdf
