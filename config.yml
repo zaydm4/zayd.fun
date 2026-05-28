@@ -37,17 +37,19 @@ params:
     enabled: true
     title: Zayd Mahmud
     subtitle: "I am a senior at Plano West Senior High School. I'm academically interested in engineering and philosophy. I compete in Lincoln-Douglas debate at the national level, coach debate privately, and used to work as a freelance 3D generalist for nearly six years."
-    imageUrl: "icon.png"
+    imageUrl: "icon.jpeg"
     imageWidth: 160
     imageHeight: 160
 
   socialIcons:
+    - name: CV
+      url: cv.pdf
     - name: Email
       url: mailto:mail@zayd.fun
     - name: Substack
       url: https://rectitudes.substack.com
-    - name: Resume
-      url: resume.pdf
+    - name: LinkedIn
+      url: https://linkedin.com/in/zayd-mahmud-879409300/
     - name: Twitter
       url: https://x.com/zira3d
     - name: GitHub
