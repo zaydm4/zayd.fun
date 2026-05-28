@@ -10,6 +10,18 @@ pagination:
 taxonomies:
   tag: tags
 
+menu:
+  main:
+    - name: Blog
+      url: https://rectitudes.substack.com
+      weight: 1
+    - name: Portfolio
+      url: portfolio/
+      weight: 2
+    - name: Contact
+      url: contact/
+      weight: 3
+
 params:
   description: "This website hosts zayd mahmud's portfolio, socials, and contact information."
   author: zayd mahmud
@@ -40,21 +52,13 @@ params:
     imageUrl: "icon.jpeg"
     imageWidth: 160
     imageHeight: 160
-
-menu:
-  main:
-    - name: Contact
-      url: /contact/
-      weight: 3
-    - name: Portfolio
-      url: /portfolio/
-      weight: 2
-    - name: Blog
-      url: https://rectitudes.substack.com
-      weight: 1
-      params:
-        newTab: true
-
+    buttons:
+      - name: Portfolio
+        url: portfolio/
+      - name: Blog
+        url: https://rectitudes.substack.com
+      - name: Contact
+        url: contact/
   socialIcons:
     - name: CV
       url: cv.pdf
@@ -68,7 +72,6 @@ menu:
       url: https://x.com/zira3d
     - name: GitHub
       url: https://github.com/zaydm4
-
   assets:
     disableScrollBarStyle: true
   cover:
