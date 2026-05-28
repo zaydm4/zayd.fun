@@ -11,12 +11,12 @@ taxonomies:
   tag: tags
 
 params:
-  description: "This website hosts Zayd Mahmud's research papers, books, course materials, data, curriculum vitae, and contact information."
+  description: "This website hosts zayd mahmud's portfolio, socials, and contact information."
   author: zayd mahmud
   # googleAnalyticsID: "G-XXXXX"
   DateFormat: "January 2006"
   defaultTheme: dark
-  hideFooter: false
+  hideFooter: true
   disableThemeToggle: false
   ShowShareButtons: false
   ShowReadingTime: false
@@ -36,10 +36,24 @@ params:
   profileMode:
     enabled: true
     title: Zayd Mahmud
-    subtitle: "I am a senior at Plano West Senior High School. I'm academically interested in engineering and philosophy. I compete in Lincoln-Douglas debate at the national level, coach debate privately, and used to work as a freelance 3D generalist for nearly six years."
+    subtitle: "I am a senior at Plano West Senior High School. I'm academically interested in philosophy and electrical engineering. I compete in Lincoln-Douglas debate at the national level, coach debate privately, and used to work as a freelance 3D generalist for nearly six years."
     imageUrl: "icon.jpeg"
     imageWidth: 160
     imageHeight: 160
+
+menu:
+  main:
+    - name: Contact
+      url: /contact/
+      weight: 3
+    - name: Portfolio
+      url: /portfolio/
+      weight: 2
+    - name: Blog
+      url: https://rectitudes.substack.com
+      weight: 1
+      params:
+        newTab: true
 
   socialIcons:
     - name: CV
