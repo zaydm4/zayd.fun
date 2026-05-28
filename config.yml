@@ -1,4 +1,4 @@
-baseURL: "https://zayd.fun" 
+baseURL: "https://zayd.fun"
 title: "zayd's corner"
 theme: PaperMod
 
@@ -8,103 +8,69 @@ pagination:
   pagerSize: 20
 
 taxonomies:
-    tag: tags
-
-menu:
-    main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
-          url: papers/
-          weight: 2
-        - name: Courses
-          url: courses/
-          weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+  tag: tags
 
 params:
-    description: "This website hosts Moritz-Maria von Igelfeld's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Moritz-Maria von Igelfeld
-    # googleAnalyticsID: "G-XXXXX"
-    DateFormat: "January 2006"
-    defaultTheme: light
-    hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
-    ShowToc: false
-    disableScrollToTop: true
-    TocOpen: true
-    ShowWordCount: false
-    UseHugoToc: true
-    comments: false
-    math: true
-    profileMode:
-          enabled: true
-          title: Professor Dr von Igelfeld
-          subtitle: "I am a Professor in the Institute of Romance Philology at the University of Regensburg, Germany. My research focuses on Portuguese irregular verbs. I was a doctoral student of Professor Dr Dieter Vogelsang in Munich, and later a second assistant of Professor Walter Schoeffler-Henschell at the University of Wiesbaden."
-          imageUrl: "picture.jpeg"
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: Papers
-              url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-            - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+  description: "This website hosts Zayd Mahmud's research papers, books, course materials, data, curriculum vitae, and contact information."
+  author: zayd mahmud
+  # googleAnalyticsID: "G-XXXXX"
+  DateFormat: "January 2006"
+  defaultTheme: dark
+  hideFooter: false
+  disableThemeToggle: false
+  ShowShareButtons: false
+  ShowReadingTime: false
+  disableSpecial1stPost: true
+  disableAnchoredHeadings: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowAllPagesInArchive: false
+  ShowToc: false
+  disableScrollToTop: true
+  TocOpen: true
+  ShowWordCount: false
+  UseHugoToc: true
+  comments: false
+  math: true
+  profileMode:
+    enabled: true
+    title: Zayd Mahmud
+    subtitle: "I am a senior at Plano West Senior High School. I'm academically interested in engineering and philosophy. I compete in Lincoln-Douglas debate at the national level, coach debate privately, and used to work as a freelance 3D generalist for nearly six years."
+    imageUrl: "icon.png"
+    imageWidth: 160
+    imageHeight: 160
 
-    socialIcons:
-        - name: Resume
-          url: Resume.pdf
-        - name: Email
-          url: mailto:user@gmail.com
-        - name: GitHub
-          url: https://github.com/user
-        - name: Substack
-          url: https://user.substack.com
-        - name: Twitter
-          url: https://x.com/user
+  socialIcons:
+    - name: Email
+      url: mailto:mail@zayd.fun
+    - name: Substack
+      url: https://rectitudes.substack.com
+    - name: Resume
+      url: resume.pdf
+    - name: Twitter
+      url: https://x.com/zira3d
+    - name: GitHub
+      url: https://github.com/zaydm4
 
-    assets:
-        disableScrollBarStyle: true
-    cover:
-        hiddenInList: false
-        hiddenInSingle: true
-    label:
-      text: "Moritz-Maria von Igelfeld"
-      icon: favicon.ico
-      iconHeight: 18
+  assets:
+    disableScrollBarStyle: true
+  cover:
+    hiddenInList: false
+    hiddenInSingle: true
+  label:
+    text: "zayd mahmud"
+    icon: favicon.ico
+    iconHeight: 18
 
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        guessSyntax: true
-        style: autumn 
-    tableOfContents:
-        endLevel: 2
-        ordered: false
-        startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    guessSyntax: true
+    style: autumn
+  tableOfContents:
+    endLevel: 2
+    ordered: false
+    startLevel: 2
