@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>zayd mahmud</title>
+  <meta name="description" content="Zayd Mahmud: 3D work, photography, writing, debate and community work.">
+  <meta property="og:title" content="zayd mahmud">
+  <meta property="og:description" content="3D work, photography, writing, debate and community work.">
+  <meta property="og:url" content="https://zayd.fun/">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000000'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23ff8d28' stroke-width='5' stroke-dasharray='2 2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+  <script>
+    // Set the theme before first paint so the page never flashes the wrong paper.
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var dark = saved ? saved === 'dark' : true; // black by default
+        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      } catch (e) { document.documentElement.dataset.theme = 'light'; }
+    })();
+  </script>
+  <base target="_blank">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" target="_self">Skip to content</a>
+
+  <header class="bar">
+    <a class="mark" href="#" target="_self">zayd mahmud</a>
+    <nav aria-label="Sections">
+      <a href="#work" target="_self">Art</a>
+      <a href="#writing" target="_self">Writing</a>
+      <a href="#elsewhere" target="_self">Contact</a>
+    </nav>
+    <button id="theme" type="button" aria-label="Switch between light and dark paper">
+      <span aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>Hey! I'm Zayd.</h1>
+        <p class="lede">I'm a senior at Plano West. I keynote charity galas that have raised $700K+, run media for a mayor's office and a congressional campaign, and built a 3D art business featured by Bungie and Halo Studios. In my free time, I compete in Lincoln-Douglas debate, where I've ranked 24th nationally. You can find my longer resume <a href="/assets/profile/resume.pdf">here</a>.</p>
+        <p class="sub">Hint: You can hover over a picture for color, and click on it to enlarge.</p>
+      </div>
+      <div class="hero-art" id="profile"></div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section class="block pair" aria-label="3D and Frames">
+      <div class="col" id="work">
+        <h2>3D Art</h2>
+        <p class="sub">10+ years of experience. More on Twitter at <a href="https://x.com/zira3d">@zira3d</a>.</p>
+        <div class="grid" id="grid-work"></div>
+      </div>
+      <div class="col" id="frames">
+        <h2>Frames</h2>
+        <p class="sub">Mobile and DSLR stills. More on Instagram at <a href="https://instagram.com/zayd.png">@zayd.png</a>.</p>
+        <div class="grid" id="grid-frames"></div>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section id="writing" class="block">
+      <h2>Writing</h2>
+      <p class="sub">I write <a href="https://rectitudes.substack.com">rectitudes</a> on Substack.</p>
+      <ol class="posts" id="posts"></ol>
+      <p class="more">You can find the rest of my posts <a href="https://rectitudes.substack.com/archive">here</a>.</p>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section id="elsewhere" class="block">
+      <h2>Elsewhere</h2>
+      <p class="contact" id="contact">
+        <span>For</span>
+        <span class="c-pick">
+          <button type="button" id="c-btn" class="c-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="c-list">
+            <span id="c-label">personal inquiries,</span><span class="c-caret" aria-hidden="true"></span>
+          </button>
+          <span id="c-list" class="c-list" role="listbox" aria-label="What is this about?">
+            <span role="option" data-label="personal inquiries," data-email="mail@zayd.fun">personal inquiries,</span>
+            <span role="option" data-label="art commissions," data-email="art@zayd.fun">art commissions,</span>
+            <span role="option" data-label="debate," data-email="debate@zayd.fun">debate,</span>
+          </span>
+        </span>
+        <span>you can reach me at</span>
+        <a id="c-mail" class="c-mail" href="mailto:mail@zayd.fun"><span id="c-text">mail@zayd.fun</span></a>
+        <button type="button" id="c-copy" class="c-copy" aria-label="Copy email address" title="Copy email address">
+          <svg class="i-copy" viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11"/><path d="M5 15V5h10"/></svg>
+          <svg class="i-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12.5l5 5L19.5 7"/></svg>
+        </button>
+      </p>
+      <ul class="elsewhere">
+        <li><a href="https://x.com/zira3d">twitter</a></li>
+        <li><a href="https://instagram.com/zayd.exr">instagram</a></li>
+        <li><a href="https://linkedin.com/in/zayd-mahmud-879409300/">linkedin</a></li>
+        <li><a href="https://github.com/zaydm4">github</a></li>
+        <li><a href="https://substack.com/@drawocoward">substack</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>&copy; 2026 Zayd Mahmud</span>
+  </footer>
+
+  <script src="data/media.js"></script>
+  <script src="data/posts.js"></script>
+  <script src="js/dither.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

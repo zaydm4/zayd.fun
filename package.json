@@ -1,0 +1,10 @@
+{
+  "name": "zayd-fun",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

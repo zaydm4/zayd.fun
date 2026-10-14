@@ -1,0 +1,113 @@
+// Scans assets/profile, assets/3d and assets/frames and writes data/media.js.
+// Run by the GitHub Action on every deploy; run it yourself with: node scripts/build-media.mjs
+//
+// Naming: "2024-neon-alley.jpg" becomes the title "Neon alley" with year 2024.
+// Without a year prefix the file name is the title. Newest year first.
+// Optional: assets/<folder>/captions.json to override anything per file:
+//   { "2024-neon-alley.jpg": { "title": "Neon Alley", "year": "2024", "href": "https://instagram.com/p/...", "alt": "..." } }
+import { readdir, readFile, writeFile, mkdir, stat } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+
+// Small WebP copies for the tiles, so the page does not download your full-size originals.
+// They are written to assets/thumbs/ (git-ignored), only rebuilt when the original changes, and the
+// full image still opens in the enlarge view. Needs sharp (npm install sharp); without it the tiles
+// just use the originals, as before.
+let sharp = null;
+try { sharp = (await import('sharp')).default; } catch { /* no sharp: skip thumbnails */ }
+const THUMB_SIDE = { '3d': 720, frames: 720, profile: 1000 };   // longest side in pixels
+
+const ROOT = new URL('../', import.meta.url);
+const EXT = /\.(jpe?g|png|webp|avif|gif)$/i;
+
+const PLACEHOLDERS = {
+  '3d': Array.from({ length: 6 }, (_, i) => ({ src: '', title: 'Render title', year: String(2024 - Math.floor(i / 2)), alt: 'Placeholder' })),
+  frames: Array.from({ length: 4 }, () => ({ src: '', title: 'Frame', year: '', alt: 'Placeholder' })),
+};
+
+async function captionsFor(folder) {
+  try { return JSON.parse(await readFile(new URL(`assets/${folder}/captions.json`, ROOT), 'utf8')); }
+  catch { return {}; }
+}
+
+function parse(file) {
+  const base = file.replace(/\.[^.]+$/, '');
+  // "2024-neon-alley" (year first) or "Neon alley 2024" (year last)
+  const first = base.match(/^(\d{4})[-_ ]+(.+)$/);
+  const last = base.match(/^(.+?)[-_ ]+(\d{4})$/);
+  const year = first ? first[1] : last ? last[2] : '';
+  const words = (first ? first[2] : last ? last[1] : base).replace(/[-_]+/g, ' ').trim();
+  return { year, title: words.charAt(0).toUpperCase() + words.slice(1) };
+}
+
+async function thumbFor(folder, file) {
+  if (!sharp || /\.gif$/i.test(file)) return '';
+  const src = new URL(`assets/${folder}/${file}`, ROOT), out = new URL(`assets/thumbs/${folder}/${file}.webp`, ROOT);
+  try {
+    const [a, b] = await Promise.all([stat(src), stat(out).catch(() => null)]);
+    if (!b || b.mtimeMs < a.mtimeMs) {
+      await mkdir(new URL(`assets/thumbs/${folder}/`, ROOT), { recursive: true });
+      const side = THUMB_SIDE[folder];
+      await sharp(fileURLToPath(src)).rotate()
+        .resize({ width: side, height: side, fit: 'inside', withoutEnlargement: true })
+        .webp({ quality: 72 }).toFile(fileURLToPath(out));
+    }
+    return `assets/thumbs/${folder}/${encodeURIComponent(file)}.webp`;
+  } catch (err) {
+    console.warn(`thumbnail skipped for ${file}: ${err.message}`);
+    return '';
+  }
+}
+
+async function scan(folder) {
+  let files = [];
+  try { files = (await readdir(new URL(`assets/${folder}/`, ROOT))).filter((f) => EXT.test(f)); }
+  catch { /* folder missing */ }
+  const captions = await captionsFor(folder);
+  const items = await Promise.all(files.map(async (file) => {
+    const auto = parse(file);
+    const c = captions[file] || {};
+    const title = c.title ?? auto.title;
+    const item = {
+      src: `assets/${folder}/${encodeURIComponent(file)}`,
+      title,
+      year: c.year ?? auto.year,
+      alt: c.alt ?? title,
+    };
+    if (c.href) item.href = c.href;
+    if (c.position) item.position = c.position;
+    const thumb = await thumbFor(folder, file);
+    if (thumb) item.thumb = thumb;
+    return item;
+  }));
+  items.sort((a, b) => (b.year || '').localeCompare(a.year || '') || a.title.localeCompare(b.title));
+  return items;
+}
+
+// Profile photo: the first image in assets/profile (a file named profile.* wins).
+async function findProfile() {
+  let files = [];
+  try { files = (await readdir(new URL('assets/profile/', ROOT))).filter((f) => EXT.test(f)).sort(); }
+  catch { /* folder missing */ }
+  const pick = files.find((f) => /^profile\./i.test(f)) || files[0];
+  const caption = pick ? (await captionsFor('profile'))[pick] || {} : {};
+  if (!pick) return { src: '', alt: 'Zayd Mahmud' };
+  const me = { src: `assets/profile/${encodeURIComponent(pick)}`, alt: 'Zayd Mahmud', position: caption.position || '50% 30%' };
+  const thumb = await thumbFor('profile', pick);
+  if (thumb) me.thumb = thumb;
+  return me;
+}
+
+const work = await scan('3d');
+const frames = await scan('frames');
+const profile = await findProfile();
+const media = {
+  profile,
+  work: work.length ? work : PLACEHOLDERS['3d'],
+  frames: frames.length ? frames : PLACEHOLDERS.frames,
+};
+
+await writeFile(
+  new URL('data/media.js', ROOT),
+  `/* Generated by scripts/build-media.mjs from the files in assets/3d and assets/frames. Do not edit by hand. */\nwindow.MEDIA = ${JSON.stringify(media, null, 2)};\n`,
+);
+console.log(`profile: ${profile.src ? 'yes' : 'none'}, 3d: ${work.length} image(s), frames: ${frames.length} image(s)${work.length + frames.length ? '' : ' (showing placeholders)'}`);
