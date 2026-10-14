@@ -2,7 +2,8 @@
   "name": "zayd-fun",
   "private": true,
   "scripts": {
-    "dev": "node scripts/serve.mjs"
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/fetch-posts.mjs && node scripts/build-media.mjs && rm -rf _site && mkdir _site && cp -r index.html css js data assets _site/ && (cp resume.pdf CNAME _site/ 2>/dev/null; node scripts/optimize-images.mjs _site/assets)"
   },
   "dependencies": {
     "sharp": "^0.35.5"
