@@ -53,11 +53,11 @@ window.MEDIA = {
   ],
   "frames": [
     {
-      "src": "assets/frames/Copenhagen%20Gull%20-%202026.jpg",
-      "title": "Copenhagen Gull",
+      "src": "assets/frames/Gull%20in%20Oslo%20-%202026.jpg",
+      "title": "Gull in Oslo",
       "year": "2026",
-      "alt": "Copenhagen Gull",
-      "thumb": "assets/thumbs/frames/Copenhagen%20Gull%20-%202026.jpg.webp"
+      "alt": "Gull in Oslo",
+      "thumb": "assets/thumbs/frames/Gull%20in%20Oslo%20-%202026.jpg.webp"
     },
     {
       "src": "assets/frames/Homecoming%20Football%20-%202026.jpg",
@@ -67,18 +67,18 @@ window.MEDIA = {
       "thumb": "assets/thumbs/frames/Homecoming%20Football%20-%202026.jpg.webp"
     },
     {
-      "src": "assets/frames/Vicki%20Goodwin%20for%20MDC%20-%202026.jpg",
-      "title": "Vicki Goodwin for MDC",
+      "src": "assets/frames/West%20Band%20Reflections%20-%202026.jpg",
+      "title": "West Band Reflections",
       "year": "2026",
-      "alt": "Vicki Goodwin for MDC",
-      "thumb": "assets/thumbs/frames/Vicki%20Goodwin%20for%20MDC%20-%202026.jpg.webp"
+      "alt": "West Band Reflections",
+      "thumb": "assets/thumbs/frames/West%20Band%20Reflections%20-%202026.jpg.webp"
     },
     {
-      "src": "assets/frames/West%20at%20FNL%20-%202026.jpg",
-      "title": "West at FNL",
-      "year": "2026",
-      "alt": "West at FNL",
-      "thumb": "assets/thumbs/frames/West%20at%20FNL%20-%202026.jpg.webp"
+      "src": "assets/frames/Junior%20Ezenou%20at%20CCYD.jpg",
+      "title": "Junior Ezenou at CCYD",
+      "year": "",
+      "alt": "Junior Ezenou at CCYD",
+      "thumb": "assets/thumbs/frames/Junior%20Ezenou%20at%20CCYD.jpg.webp"
     }
   ]
 };
